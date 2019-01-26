@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Pneumonia Xray Detection</h2>
+
+<p>
+Hello! I have created this computer vision app to use my image classification model to detect pneumonia.
+You can upload any picture of chest xray's and by using keras and tensorflow once you hit "Get Image Prediction" it will
+analyze your image then return a prediction.
+
+I hope you enjoy!
+</p>
+
+<div>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Please Choose A File...
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Get Image Prediction</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+
+</div>
+
+{% endblock %}
