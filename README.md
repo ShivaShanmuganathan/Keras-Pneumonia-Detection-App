@@ -1,3 +1,5 @@
+![](pneumonia.jpeg)
+
 # Data
 https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
 
